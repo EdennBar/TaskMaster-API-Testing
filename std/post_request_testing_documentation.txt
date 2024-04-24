@@ -1,0 +1,30 @@
+Title: POST Task Api Testing
+
+Test Cases:
+
+1. Successful POST Request (Status 200):
+   - Description: Test sending a request for a new task returns a successful response with status code 200 and the correct task data.
+   - Test Steps:
+     1. Send a successful POST request to `/tasks` with response data.
+     2. Verify that the response status is 200.
+     3. Verify that the response data matches the expected responseData.
+
+2. POST Request - 404 Not Found:
+   - Description: Test sending a request for a new task with an invalid ID returns a response with status code 404 (Not Found).
+   - Test Steps:
+     1. Modify `responseData` to have an invalid task ID.
+     2. Send a POST request to `/tasks` with status code 404.
+     3. Verify that the error response status is 404.
+
+3. 400 Bad Request Missing title field:
+   - Description: Test sending a request for a new task with a missing title field returns a response with status code 400 (Bad Request).
+   - Test Steps:
+     1. Define a task object with missing title field.
+     2. Send a POST request to `/tasks` with status code 400.
+     3. Verify that the error response status is 400.
+
+4. POST Request - 500 Internal Server Error:
+   - Description: Test sending request returns status code 500 (Internal Server Error).
+   - Test Steps:
+     1. Send a POST request to `/tasks` with status code 500.
+     2. Verify that the error response status is 500.

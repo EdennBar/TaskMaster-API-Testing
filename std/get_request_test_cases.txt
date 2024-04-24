@@ -1,0 +1,29 @@
+Title: GET Task Api Testing
+
+Successful GET Task (Status 200):
+Description: Retrieve a task by its taskId returns a successful response with status code 200 and the correct task data.
+Test Steps:
+1. Send GET request to /tasks/{taskId} with response data.
+2. Verify that the response status is 200.
+3. Verify that the response data matches the expected responseData.
+
+GET Task - 404 Not Found:
+Description: Test sending non persistent task returns status code 404 (Not Found).
+Test Steps:
+1. Send GET request to /tasks/{wrongId} with status code 404.
+2. Expect the request to throw an error.
+3. Verify that the error response status is 404.
+
+GET Task - 404 Not Found:
+Description: Tests sending a GET request to a wrong URL returns status code 404 (Not Found).
+Test Steps:
+1. Send GET request to `/not/real/endpoint` with status code 404.
+2. Expect the request to throw an error.
+3. Verify that the error response status is 404.
+
+GET Request - 500 Internal Server Error:
+Description: Test sending request returns status code 500 (Internal Server Error).
+Test Steps:
+1. Send GET request to /tasks/{wrongId} with status code 500.
+2. Expect the request to throw an error.
+3. Verify that the error response status is 500.

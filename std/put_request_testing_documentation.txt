@@ -1,0 +1,22 @@
+Title: PUT Task Api Testing
+
+Test Cases:
+
+1. Put Update Title And Description - 200 Ok:
+   - Description: Test sending a request for updating the title and description of a task via a PUT request returns a successful response with status code 200 and the updated task data.
+   - Test Steps:
+     1. Send a successful PUT request to `/tasks/{taskId}` with the updated response data.
+     2. Verify that the response status is 200.
+     3. Verify that the response data matches the updated `responseData`.
+
+2. PUT Update Task Not Found - 404 Not Found:
+   - Description: Test sending a request for updating a task with an invalid ID via a PUT request returns a response with status code 404 (Not Found).
+   - Test Steps:
+     1. Send a PUT request to `/tasks/{wrongId}` with status code 404.
+     2. Verify that the error response status is 404.
+
+3. PUT Update Task Failed - 500 Internal Server Error:
+   - Description: Test sending request returns status code 500 (Internal Server Error).
+   - Test Steps:
+     1. Send a PUT request to `/tasks/{taskId}` with status code 500.
+     2. Verify that the error response status is 500.
