@@ -3,6 +3,7 @@
 ## Description
 
 TaskMaster is a project for testing APIs related to a task management system. It utilizes TypeScript for type safety, Jest as the testing framework, and axios-mock-adapter for mocking HTTP requests in tests.
+![Automation Framework Design](/Automation-Framework-Design.png)
 
 ## Installation
 
